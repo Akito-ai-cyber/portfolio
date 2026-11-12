@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="loading" class="displaying active shown">
+            <div class="writing">
+                <svg class="writing-linie" viewBox="0 0 240 80" aria-hidden="true">
+                    <path pathLength="1" d="M10 50 C 40 20, 60 80, 90 50 S 140 20, 170 50 S 210 70, 230 45"/>    
+                </svg>
+                <svg class="feather" viewBox="0 0 60 100" aria-hidden="true">
+                    <path class="feather-vane" d="M55 5 C 20 15, 5 50, 15 75 C 40 60, 58 35, 55 5 Z"/>
+                    <path class="feather-quill" d="M52 8 L 6 95"/>
+                </svg>
+            </div>
+            <p class="loading-title">Ein Märchen in Seiten</p>
+            <p class="loading-sub">Die Geschichte wird geschrieben...</p>
+        </section>
+
+        <section id="intro" class="displaying">
+            <button id="ueberspringen">Überspringen</button>
+            <p  id="voice" class="voice-text"></p>
+            <p class="voice-text-hint">Tippe, um fortzufahren...</p>
+        </section>
+
+        <section id="book-select" class="displaying">
+            <h1>Wähle dein Märchen</h1>
+
+            <div class="books">
+                <button class="book" data-book="dse">
+                    <span class="book-title">Das silberne Echo</span>
+                </button>
+
+                <button class="book" data-book="portfolio">
+                    <span class="book-title-small">Ein Märchen in Seiten</span>
+                    <span class="book-title">Portfolio</span>
+                    <span class="text-ordinary">Daniil Hrynenko</span>
+                </button>
+
+                <button class="book" data-book="dcdn">
+                    <span class="book-title">Die Chronik der Nebel</span>
+                </button>
+            </div>
+
+            <p class="voice-text-hint">Tippe auf ein Buch, um es aufzuschlagen</p>
+        </section>
+
+        <section id="book-main" class="displaying book-main">
+            <div class="book-scene">
+                <div class="book-pages"></div>
+                <div class="cover-flip">
+                    <div class="book cover" data-book="portfolio">
+                        <span class="book-title-small">Ein Märchen in Seiten</span>
+                        <span class="book-title">Portfolio</span>
+                        <span class="text-ordinary">Daniil Hrynenko</span>
+                    </div>
+                    <div class="cover-back"></div>
+                </div>    
+            </div>       
+            <button id="button-oeffnen" class="gold-button">Buch öffnen</button>
+        </section>
+            
+        <section id="book-opened" class="displaying">
+            <div class="spread">
+                <div class="book-spread">
+                    <article class="chapter active" id="prolog">
+                        <div class="page page-left">
+                            <h2 class="page-title">Prolog</h2>
+                            <p class="page-text">Es war einmal …</p>
+                            <p class="page-body">… ein junger Entwickler, der aus der Ukraine nach Deutschland kam und dort das Programmieren zu seiner Leidenschaft machte. Aus kleinen Experimenten wurden echte Webanwendungen – und aus Neugier ein Berufswunsch.</p>
+                            <span class="page-number">– 1 –</span>
+                        </div>
+                        <div class="page page-right">
+                            <h2 class="page-title">Daniil Hrynenko</h2>
+                            <p class="page-body">Auf der Suche nach einem Ausbildungsplatz als Fachinformatiker für Anwendungsentwicklung.</p>
+                            <p class="page-tags">Python · JavaScript · React · Django</p>
+                            <span class="page-number">– 2 –</span>
+                        </div>
+                    </article>
+
+                    <article class="chapter" id="ueber-mich">
+                        <div class="page page-left">
+                            <h2 class="page-title">Über mich</h2>
+                            <p class="page-body">Ich bin Daniil, komme aus der Ukraine und lebe in Waiblingen. Software zu entwickeln begeistert mich – besonders, wenn Probleme im Team gelöst werden und am Ende etwas entsteht, das wirklich funktioniert. Neues lerne ich gern eigenständig, mit Ausdauer und analytischem Denken.</p>
+                            <h3 class="page-subtitle">Sprachen</h3>
+                            <ul class="entry-list">
+                                <li><strong>Deutsch</strong> – fortgeschrittene Sprachverwendung (B2)</li>
+                                <li><strong>Ukrainisch, Russisch</strong> – Muttersprache</li>
+                                <li><strong>Englisch</strong> – A2 </li>
+                            </ul>
+                            <h3 class="page-subtitle">Interessen</h3>
+                            <p class="page-body">Fitnessstudio, Videospiele, Programmieren</p>
+                            <span class="page-number">– 3 –</span>
+                        </div>
+                        <div class="page page-right">
+                            <h2 class="page-title">Werdegang</h2>
+                            <ul class="entry-list">
+                                <li><span class="entry-date">seit 06/2026</span><strong>JOBLINGE-Programm</strong> – sechsmonatiges Berufsqualifizierungsprogramm in Vollzeit, JOBLINGE gAG Südwest</li>
+                                <li><span class="entry-date">11/2024 – 06/2025</span><strong>Deutschkurs, B2-Niveau</strong> – Deutsche Angestellten Akademie, Stuttgart</li>
+                                <li><span class="entry-date">03/2024</span><strong>Praktikum als Softwareentwickler</strong> – Sauter &amp; Held GmbH, Berglen (eine Woche)</li>
+                                <li><span class="entry-date">10/2022 – 07/2023</span><strong>Vorqualifizierungsjahr Arbeit &amp; Beruf</strong> – Kaufmännische Schule Waiblingen</li>
+                                <li><span class="entry-date">09/2022 – 05/2024</span><strong>Mittlere Reife</strong> (als Realschulabschluss anerkannt) – Lyzeum Pyrjatyn N6, Ukraine (online)</li>
+                            </ul>
+                            <span class="page-number">– 4 –</span>
+                        </div>
+                    </article>
+
+                    <article class="chapter" id="projekte">
+                        <div class="page page-left">
+                            <h2 class="page-title">Projekte</h2>
+                            <h3 class="page-subtitle">Silver Palace Tracker</h3>
+                            <p class="page-body">Eine Webanwendung mit React zur Darstellung von Spielverläufen und Statistiken des gleichnamigen Spiels. Das Kapitel wird gerade geschrieben.</p>
+                            <h3 class="page-subtitle">Soziales Netzwerk</h3>
+                            <p class="page-body">Eine Instagram-ähnliche Webanwendung mit Python und Django: Benutzerregistrierung, Anmeldung, Beiträge, Profile und Feeds, dahinter eine SQL-Datenbank.</p>
+                            <span class="page-number">– 5 –</span>
+                        </div>
+                        <div class="page page-right">
+                            <h2 class="page-title">Werkzeuge</h2>
+                            <ul class="entry-list">
+                                <li><strong>Python, JavaScript</strong> – sehr gute Kenntnisse</li>
+                                <li><strong>Webtechnologien</strong> – React, Django</li>
+                                <li><strong>Datenbanken</strong> – SQL</li>
+                                <li><strong>Microsoft Office</strong> – Grundkenntnisse</li>
+                                <li><strong>Erste Praxiserfahrung</strong> – Datenbankprogrammierung mit Vectorsoft Concept16 sowie Einblicke in React, JavaScript und TypeScript</li>
+                            </ul>
+                            <span class="page-number">– 6 –</span>
+                        </div>
+                    </article>
+
+                    <article class="chapter" id="kontakt">
+                        <div class="page page-left">
+                            <h2 class="page-title">Kontakt</h2>
+                            <p class="page-text">Und die Geschichte geht weiter …</p>
+                            <p class="page-body">Lust, das nächste Kapitel gemeinsam zu schreiben? Ich freue mich auf ein persönliches Gespräch.</p>
+                            <address class="contact-card">
+                                Lenaustraße 12 <br>
+                                71332 Waiblingen <br>
+                                E-Mail: <a class="page-link" href="mailto:hrynenkodaniil@gmail.com">hrynenkodaniil@gmail.com</a>
+                            </address>
+                            <span class="page-number">– 7 –</span>
+                        </div>
+                        <div class="page page-right">
+                            <h2 class="page-title">Lebenslauf</h2>
+                            <p class="page-body">Alle Kapitel meines Werdegangs auch zum Mitnehmen:</p>
+                            <p class="page-body"><a class="page-link" href="assets/pdf/Lebenslauf_Hrynenko, Daniil.pdf" download>Lebenslauf herunterladen</a></p>
+                            <span class="page-number">– 8 –</span>
+                        </div>
+                    </article>
+                </div>
+
+                <nav class="bookmarks" aria-label="Kapitel">
+                    <button class="bookmark active" data-chapter="prolog">Prolog</button>
+                    <button class="bookmark" data-chapter="ueber-mich">Über mich</button>
+                    <button class="bookmark" data-chapter="projekte">Projekte</button>
+                    <button class="bookmark" data-chapter="kontakt">Kontakt</button>
+                </nav>
+            </div>
+        </section>
+    </main>    
+</body>
+</html>
